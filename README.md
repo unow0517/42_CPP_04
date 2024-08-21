@@ -33,3 +33,6 @@ To ensure that the correct destructors are called when deleting objects of deriv
 
 ### `override`
 override is not required as long as the function to be overriden was defined `virtual`, but it is highly recommended because it improves code safety and clarity by ensuring that the method is properly overriding a base class virtual method.
+
+### what's the point to user `virtual` and `override`?
+It doesn't decrease the number of code I have to write, since I have to define the behavior to override. But **they enable behavior where a derived class can replace or "override" methods from a base class**.
