@@ -42,5 +42,5 @@ two distinct phase of program execution.
 * Compile-time execution:  It involves static checks, function/operator overloading, and template instantiation. Decisions are made based on the known code and types.
 * Run-time execution : It involves dynamic dispatch (polymorphism), dynamic memory allocation, and runtime type information.
 
-* **Compile-Time Polymorphism**: Achieved through function and operator overloading.
-* **Run-Time Polymorphism**: Achieved through virtual functions and inheritance, allowing for dynamic method dispatch based on the actual object type.
+* **Compile-Time Polymorphism**: Achieved through **function and operator overloading**.
+* **Run-Time Polymorphism**: Achieved through **virtual functions and inheritance**, allowing for dynamic method dispatch based on the actual object type.
