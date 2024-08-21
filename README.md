@@ -44,3 +44,6 @@ two distinct phase of program execution.
 
 * **Compile-Time Polymorphism**: Achieved through **function and operator overloading**.
 * **Run-Time Polymorphism**: Achieved through **virtual functions and inheritance**, allowing for dynamic method dispatch based on the actual object type.
+
+### Dynamic method dispatch
+Dynamic method dispatch, also known as dynamic dispatch or run-time method binding, is a mechanism in object-oriented programming that **allows a program to determine at runtime which method implementation to call, based on the actual type of the object, rather than the type of the pointer or reference used to access the object**. This feature is a key aspect of polymorphism in C++.
