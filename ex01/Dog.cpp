@@ -6,7 +6,7 @@
 /*   By: yowoo <yowoo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 13:32:57 by yowoo             #+#    #+#             */
-/*   Updated: 2024/08/22 11:04:58 by yowoo            ###   ########.fr       */
+/*   Updated: 2024/08/22 11:17:45 by yowoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,4 @@ void Dog::compareObject(const Dog& anotherDog)
 	for (int i = 0; i < 100; i++)
 		std::cout << ((this->brain)->getIdeas())[i] << "\t|\t" << ((anotherDog.getBrain())->getIdeas())[i] << std::endl;
 	std::cout << " " << std::endl;
-	
-	
 }

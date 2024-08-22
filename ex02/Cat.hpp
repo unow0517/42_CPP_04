@@ -6,17 +6,17 @@
 /*   By: yowoo <yowoo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 13:28:44 by yowoo             #+#    #+#             */
-/*   Updated: 2024/08/22 09:32:28 by yowoo            ###   ########.fr       */
+/*   Updated: 2024/08/22 11:22:43 by yowoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CAT_HPP
 #define CAT_HPP
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Brain.hpp"
 
-class Cat : public Animal
+class Cat : public AAnimal
 {
 	private:
 	Brain* brain;
@@ -25,24 +25,12 @@ class Cat : public Animal
 	Cat();
 	Cat(const Cat& otherCat);
 	~Cat();
-	
 	Cat& operator=(const Cat& cat);
 
 	std::string getType() const override;
 	void makeSound() const override;
-};	
-
-class WrongCat : public WrongAnimal
-{
-	public:
-	WrongCat();
-	WrongCat(const WrongCat& otherWrongCat);
-	~WrongCat();
-	
-	WrongCat& operator=(const WrongCat& Wrongcat);
-
-	std::string getType() const override;
-	void makeSound() const override;
+	Brain *getBrain( void ) const;
+	void compareObject(const Cat& anotherCat);
 };	
 
 #endif

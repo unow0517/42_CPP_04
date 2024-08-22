@@ -1,6 +1,6 @@
 CC := c++
 FLAGS := -Wall -Wextra -Werror -std=c++17
-SRCS = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
+SRCS = main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp
 OBJS = $(SRCS:.cpp=.o) #OBJS = list of object files
 
 NAME := ex01

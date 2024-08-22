@@ -6,13 +6,13 @@
 /*   By: yowoo <yowoo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 13:32:57 by yowoo             #+#    #+#             */
-/*   Updated: 2024/08/22 09:58:00 by yowoo            ###   ########.fr       */
+/*   Updated: 2024/08/22 11:21:56 by yowoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog(): Animal()
+Dog::Dog(): AAnimal()
 {
 	this->type = "Dog";
 	this->brain = new Brain();
@@ -47,4 +47,18 @@ void Dog::makeSound() const
 std::string Dog::getType() const
 {	
 	return "Dog";	
+}
+
+Brain *Dog::getBrain( void ) const
+{
+	return (this->brain);
+}
+
+void Dog::compareObject(const Dog& anotherDog)
+{
+	std::cout << "my brain address:" << (this->brain) << std::endl;
+	std::cout << "another brain address:" << (anotherDog.getBrain()) << std::endl;
+	for (int i = 0; i < 100; i++)
+		std::cout << ((this->brain)->getIdeas())[i] << "\t|\t" << ((anotherDog.getBrain())->getIdeas())[i] << std::endl;
+	std::cout << " " << std::endl;
 }
