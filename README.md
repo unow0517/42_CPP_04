@@ -69,3 +69,21 @@ int* ptr1 = new int(42);
 int* ptr2 = new int(*ptr1);  // Deep copy of the value, not the pointer
 ```
 
+### Pure Virtual Function
+```c++
+class AAnimal
+{
+	protected: 
+		std::string type;
+	public:
+		AAnimal(void);
+		virtual ~AAnimal(void) = 0;
+		AAnimal(const AAnimal & anotehrAanimal);
+		AAnimal& operator=(AAnimal const & rhs);
+		virtual std::string getType(void) const;
+		virtual void makeSound(void) const;
+};
+```
+
+The = 0; at the end of the function declaration makes ~AAnimal(void) a pure virtual function. A pure virtual function has **no implementation in the base class (AAnimal in this case)**. It forces derived classes to provide their own implementation of this function.
+The base class (AAnimal) becomes an abstract class, which means you cannot instantiate an object of type AAnimal directly. The class exists purely to provide a common interface for derived classes.
