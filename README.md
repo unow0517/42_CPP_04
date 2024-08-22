@@ -1,5 +1,7 @@
 # 42_CPP_04
-**Polymorphism**: Polymorphism is a core concept in object-oriented programming (OOP) that **allows objects to be treated as instances of their base class rather than their actual derived class**. This concept is key to achieving flexibility and reusability in code. In C++, polymorphism is primarily implemented through inheritance and virtual functions.
+* **Polymorphism**: Polymorphism is a core concept in object-oriented programming (OOP) that **allows objects to be treated as instances of their base class rather than their actual derived class**. This concept is key to achieving flexibility and reusability in code. In C++, polymorphism is primarily implemented through inheritance and virtual functions.
+
+* Handle array in ex01
 ## New to Learn
 ### Virtual, Override
 ```c++
@@ -47,3 +49,23 @@ two distinct phase of program execution.
 
 ### Dynamic method dispatch
 Dynamic method dispatch, also known as dynamic dispatch or run-time method binding, is a mechanism in object-oriented programming that **allows a program to determine at runtime which method implementation to call, based on the actual type of the object, rather than the type of the pointer or reference used to access the object**. This feature is a key aspect of polymorphism in C++.
+
+### `this` vs `*this`
+`this` is pointer pointing the object itself. So you can access memebers like `this->member`. `*this.member` works as well, but unnecessary.
+
+### Pointer to pointer assignment (shallow copy)
+```c++
+int* ptr1 = new int(42);
+int* ptr2 = ptr1;
+
+delete ptr1;  // ptr2 is now dangling
+std::cout << *ptr2;  // Accessing invalid memory
+```
+When you assign one pointer to another, only the pointer itself is copied, not the data it points to. This means that both pointers will point to the same memory location. If one pointer is deleted or goes out of scope, the other pointer will be left dangling (pointing to deallocated memory). Accessing or modifying the data through the dangling pointer results in undefined behavior.
+
+* solution : **deep copy**. ensure that the data pointed to is copied, not just the pointer.
+```c++
+int* ptr1 = new int(42);
+int* ptr2 = new int(*ptr1);  // Deep copy of the value, not the pointer
+```
+
