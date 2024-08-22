@@ -6,7 +6,7 @@
 /*   By: yowoo <yowoo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 13:37:53 by yowoo             #+#    #+#             */
-/*   Updated: 2024/08/22 11:07:11 by yowoo            ###   ########.fr       */
+/*   Updated: 2024/08/22 11:08:20 by yowoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int main()
 	
 	for (int i = 0; i < 4; i++)
 		delete array[i];
-	
+	std::cout << std::endl;
 	std::cout << "-----Create Animal Objects Done-----" << std::endl;
 	std::cout << "----------------------------" << std::endl;
 	std::cout << "-----Deep Copy Test-----" << std::endl;
