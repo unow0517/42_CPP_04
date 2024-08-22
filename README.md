@@ -63,7 +63,7 @@ std::cout << *ptr2;  // Accessing invalid memory
 ```
 When you assign one pointer to another, only the pointer itself is copied, not the data it points to. This means that both pointers will point to the same memory location. If one pointer is deleted or goes out of scope, the other pointer will be left dangling (pointing to deallocated memory). Accessing or modifying the data through the dangling pointer results in undefined behavior.
 
-* solution : **deep copy**. ensure that the data pointed to is copied, not just the pointer.
+* solution : **deep copy**. ensure that the data pointed to is copied, not just the pointer. addresses of original and copied object are different.
 ```c++
 int* ptr1 = new int(42);
 int* ptr2 = new int(*ptr1);  // Deep copy of the value, not the pointer
