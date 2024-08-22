@@ -6,7 +6,7 @@
 /*   By: yowoo <yowoo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 13:32:57 by yowoo             #+#    #+#             */
-/*   Updated: 2024/08/22 09:57:59 by yowoo            ###   ########.fr       */
+/*   Updated: 2024/08/22 11:05:15 by yowoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,23 @@ Cat::Cat() : Animal()
 {
 	this->type = "Cat";
 	this->brain = new Brain();
-	std::cout << "Object Cat is derived from Object Animal " << std::endl;
+	std::cout << "Object CAT is derived from Object Animal " << std::endl;
 }
 
 Cat::~Cat()
 {
 	delete this->brain;
-	std::cout << "Object Cat is destructed" << std::endl;
+	std::cout << "Object CAT is destructed" << std::endl;
 }
 Cat::Cat(const Cat& otherCat)
 {
-	std::cout << "Object Cat is copy-constructed" << std::endl;
+	std::cout << "Object CAT is copy-constructed" << std::endl;
 	this->type = otherCat.getType();
 }
 
 Cat& Cat::operator=(const Cat& anotherCat)
 {
-	std::cout << "=operator in Cat called" << std::endl;
+	std::cout << "=operator in CAT called" << std::endl;
 	if (this != &anotherCat) 
 		this->type = anotherCat.getType();
   	return *this;
@@ -49,37 +49,17 @@ std::string Cat::getType() const
 	return "Cat";	
 }
 
-//WrongCat
-WrongCat::WrongCat() : WrongAnimal()
+Brain *Cat::getBrain( void ) const
 {
-	this->type = "WrongCat";
-	std::cout << "Object WrongCat is derived from Object Animal " << std::endl;
+	return (this->brain);
 }
 
-WrongCat::~WrongCat()
+void Cat::compareObject(const Cat& anotherCat)
 {
-	std::cout << "Object WrongCat is destructed" << std::endl;
-}
-WrongCat::WrongCat(const WrongCat& otherWrongCat)
-{
-	std::cout << "Object WrongCat is copy-constructed" << std::endl;
-	this->type = otherWrongCat.getType();
-}
+	std::cout << "my brain address:" << (this->brain) << std::endl;
+	std::cout << "another brain address:" << (anotherCat.getBrain()) << std::endl;
+	for (int i = 0; i < 100; i++)
+		std::cout << ((this->brain)->getIdeas())[i] << "\t|\t" << ((anotherCat.getBrain())->getIdeas())[i] << std::endl;
+	std::cout << " " << std::endl;
 
-WrongCat& WrongCat::operator=(const WrongCat& anotherWrongCat)
-{
-	std::cout << "=operator in WrongCat called" << std::endl;
-	if (this != &anotherWrongCat) 
-		this->type = anotherWrongCat.getType();
-  	return *this;
-}
-
-void WrongCat::makeSound() const
-{
-	std::cout << "BOOOOO BOOOO I AM A WrongCAT" << std::endl;
-}
-
-std::string WrongCat::getType() const
-{	
-	return "WrongCat";	
 }

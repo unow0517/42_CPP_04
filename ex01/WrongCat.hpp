@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yowoo <yowoo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/21 13:28:44 by yowoo             #+#    #+#             */
-/*   Updated: 2024/08/22 10:53:46 by yowoo            ###   ########.fr       */
+/*   Created: 2024/08/22 10:09:11 by yowoo             #+#    #+#             */
+/*   Updated: 2024/08/22 10:27:42 by yowoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef WRONGCAT_HPP
+#define WRONGCAT_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+#include "WrongAnimal.hpp"
 
-class Cat : public Animal
+class WrongCat : public WrongAnimal
 {
-	private:
-	Brain* brain;
-	
 	public:
-	Cat();
-	Cat(const Cat& otherCat);
-	~Cat();
-	Cat& operator=(const Cat& cat);
+	WrongCat();
+	WrongCat(const WrongCat& otherWrongCat);
+	~WrongCat();
+	WrongCat& operator=(const WrongCat& Wrongcat);
 
-	std::string getType() const override;
-	void makeSound() const override;
-	Brain *getBrain( void ) const;
-	void compareObject(const Cat& anotherCat);
+	std::string getType() const;
+	void makeSound() const;
 };	
 
 #endif

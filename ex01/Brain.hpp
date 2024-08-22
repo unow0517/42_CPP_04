@@ -6,7 +6,7 @@
 /*   By: yowoo <yowoo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/22 08:38:45 by yowoo             #+#    #+#             */
-/*   Updated: 2024/08/22 09:50:01 by yowoo            ###   ########.fr       */
+/*   Updated: 2024/08/22 10:30:46 by yowoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class Brain
 		~Brain(void);
 		Brain(const Brain & anotherBrain);
 		Brain & operator=(Brain const & rhs);
+		
 		std::string *getIdeas() const;
 
 };
