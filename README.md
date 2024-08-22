@@ -53,3 +53,19 @@ Dynamic method dispatch, also known as dynamic dispatch or run-time method bindi
 ### `this` vs `*this`
 `this` is pointer pointing the object itself. So you can access memebers like `this->member`. `*this.member` works as well, but unnecessary.
 
+### Pointer to pointer assignment
+```c++
+int* ptr1 = new int(42);
+int* ptr2 = ptr1;
+
+delete ptr1;  // ptr2 is now dangling
+std::cout << *ptr2;  // Accessing invalid memory
+```
+When you assign one pointer to another, only the pointer itself is copied, not the data it points to. This means that both pointers will point to the same memory location. If one pointer is deleted or goes out of scope, the other pointer will be left dangling (pointing to deallocated memory). Accessing or modifying the data through the dangling pointer results in undefined behavior.
+
+* solution : **deep copy**. ensure that the data pointed to is copied, not just the pointer.
+```c++
+int* ptr1 = new int(42);
+int* ptr2 = new int(*ptr1);  // Deep copy of the value, not the pointer
+```
+
