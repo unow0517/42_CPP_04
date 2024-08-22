@@ -53,7 +53,7 @@ Dynamic method dispatch, also known as dynamic dispatch or run-time method bindi
 ### `this` vs `*this`
 `this` is pointer pointing the object itself. So you can access memebers like `this->member`. `*this.member` works as well, but unnecessary.
 
-### Pointer to pointer assignment
+### Pointer to pointer assignment (shallow copy)
 ```c++
 int* ptr1 = new int(42);
 int* ptr2 = ptr1;
