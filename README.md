@@ -1,5 +1,7 @@
 # 42_CPP_04
-**Polymorphism**: Polymorphism is a core concept in object-oriented programming (OOP) that **allows objects to be treated as instances of their base class rather than their actual derived class**. This concept is key to achieving flexibility and reusability in code. In C++, polymorphism is primarily implemented through inheritance and virtual functions.
+* **Polymorphism**: Polymorphism is a core concept in object-oriented programming (OOP) that **allows objects to be treated as instances of their base class rather than their actual derived class**. This concept is key to achieving flexibility and reusability in code. In C++, polymorphism is primarily implemented through inheritance and virtual functions.
+
+* Handle array in ex01
 ## New to Learn
 ### Virtual, Override
 ```c++
@@ -47,3 +49,7 @@ two distinct phase of program execution.
 
 ### Dynamic method dispatch
 Dynamic method dispatch, also known as dynamic dispatch or run-time method binding, is a mechanism in object-oriented programming that **allows a program to determine at runtime which method implementation to call, based on the actual type of the object, rather than the type of the pointer or reference used to access the object**. This feature is a key aspect of polymorphism in C++.
+
+### `this` vs `*this`
+`this` is pointer pointing the object itself. So you can access memebers like `this->member`. `*this.member` works as well, but unnecessary.
+
