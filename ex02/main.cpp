@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yowoo <yowoo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/22 10:13:02 by yowoo             #+#    #+#             */
-/*   Updated: 2024/08/22 10:27:28 by yowoo            ###   ########.fr       */
+/*   Created: 2024/08/21 13:37:53 by yowoo             #+#    #+#             */
+/*   Updated: 2024/08/22 09:59:53 by yowoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#include "Dog.hpp"
+#include "Cat.hpp"
 
-#include "Animal.hpp"
-
-class Cat : public Animal
+int main() 
 {
-	public:
-	Cat();
-	Cat(const Cat& otherCat);
-	~Cat();
-	Cat& operator=(const Cat& cat);
+	const Animal* j = new Dog();
+	std::cout << " " << std::endl;
+	const Animal* i = new Cat();
+	std::cout << " " << std::endl;
+	
+	delete j;//should not create a leak delete i;
+	std::cout << " " << std::endl;
 
-	std::string getType() const override;
-	void makeSound() const override;
-};	
+	delete i;
+	
+	system("leaks ex01");
+	return 0; 
 
-#endif
+}

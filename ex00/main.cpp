@@ -6,12 +6,14 @@
 /*   By: yowoo <yowoo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 13:37:53 by yowoo             #+#    #+#             */
-/*   Updated: 2024/08/22 08:35:50 by yowoo            ###   ########.fr       */
+/*   Updated: 2024/08/22 10:17:33 by yowoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 #include "Cat.hpp"
+#include "WrongCat.hpp"
+#include "WrongAnimal.hpp"
 
 int main() 
 {

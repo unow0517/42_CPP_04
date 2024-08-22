@@ -6,7 +6,7 @@
 /*   By: yowoo <yowoo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 13:28:44 by yowoo             #+#    #+#             */
-/*   Updated: 2024/08/21 17:27:49 by yowoo            ###   ########.fr       */
+/*   Updated: 2024/08/22 10:27:33 by yowoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ class Dog : public Animal
 	Dog();
 	Dog(const Dog& otherDog);
 	~Dog();
-	
 	Dog& operator=(const Dog& dog);
 	
 	std::string getType() const override;

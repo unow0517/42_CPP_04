@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yowoo <yowoo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/22 10:13:02 by yowoo             #+#    #+#             */
-/*   Updated: 2024/08/22 10:27:28 by yowoo            ###   ########.fr       */
+/*   Created: 2024/08/22 08:38:45 by yowoo             #+#    #+#             */
+/*   Updated: 2024/08/22 09:50:01 by yowoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-#include "Animal.hpp"
+#include <iostream>
 
-class Cat : public Animal
+class Brain
 {
+	private:
+		std::string	*ideas;
 	public:
-	Cat();
-	Cat(const Cat& otherCat);
-	~Cat();
-	Cat& operator=(const Cat& cat);
+		Brain(void);
+		~Brain(void);
+		Brain(const Brain & anotherBrain);
+		Brain & operator=(Brain const & rhs);
+		std::string *getIdeas() const;
 
-	std::string getType() const override;
-	void makeSound() const override;
-};	
+};
 
 #endif
